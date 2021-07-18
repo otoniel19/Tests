@@ -6,3 +6,11 @@ body {
   width: 395px;
   border: 2px groove;
 }
+.btn {
+  background: none;
+  border: transparent;
+  font-size: 200%;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+}
