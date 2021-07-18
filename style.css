@@ -2,3 +2,7 @@ body {
     background: url('assets/res/background.jpeg') no-repeat;
     background-size: 300%;
 }
+#img {
+  width: 395px;
+  border: 2px groove;
+}
