@@ -73,6 +73,7 @@ setInterval(function() {
     pc = 10
   }
  },100)
+ 
 },1000)
 
 //carrega a imagem pela primeira vez
