@@ -14,3 +14,10 @@ body {
   text-align: center;
   cursor: pointer;
 }
+#load {
+  text-align: center;
+  background: white;
+  width: 100px;
+  border-radius: 15px;
+  padding: 1px;
+}

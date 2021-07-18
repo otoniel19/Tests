@@ -1,5 +1,8 @@
 var obj = document.querySelector("div.img")
-var tmp = document.querySelector('p#seg')
+
+var px = 100
+
+var pc = 10
 
 //numeraçao da img
 var i = 1
@@ -9,12 +12,16 @@ var volta1 = document.getElementsByClassName("btn")[0].addEventListener('click',
   setTimeout(function() {
     i--
    load()
+    px = 100
+     pc = 10
   },)
 })
 var ir1 = document.getElementsByClassName("btn")[1].addEventListener('click', function() {
  setTimeout(function() {
      i++
       load()
+       px = 100
+        pc = 10
  },) 
 })
 
@@ -49,11 +56,34 @@ var seg = 10
 
 setInterval(function() {
   seg--
+  px += 30
+  pc += 9
    if(seg <= 0) {
      seg = 10
    }
-   tmp.innerHTML = seg
+   
+  setTimeout(function () {
+    if(seg === 10) {
+      px = 100
+    }
+  },300)
+  
+ setTimeout(function() {
+  if(pc === 100) {
+    pc = 10
+  }
+ },100)
 },1000)
 
 //carrega a imagem pela primeira vez
 window.addEventListener('load', load)
+
+let loadBar = document.getElementById("load")
+
+executeLoad()
+function executeLoad() {
+  loadBar.style.width = px+"px"
+    loadBar.innerHTML = pc+"%"
+    requestAnimationFrame(executeLoad)
+    
+}
