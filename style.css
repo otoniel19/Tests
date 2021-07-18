@@ -1,3 +1,4 @@
 body {
-    font-size: 15pt;
+    background: url('assets/res/background.jpeg') no-repeat;
+    background-size: 300%;
 }
